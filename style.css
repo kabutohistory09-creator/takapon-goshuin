@@ -1,0 +1,153 @@
+:root{--main:#b03a2e;--main-dark:#7e2418;--accent:#c9a227;--bg:#faf6ec;--ink:#33302a;--muted:#8a7a5f;--card:#fffdf6;--line:#e5d9bd;--navy:#2b3a55;--navy-dark:#1d2942}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;background-color:var(--bg);background-image:linear-gradient(rgba(176,58,46,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(176,58,46,.04) 1px,transparent 1px);background-size:28px 28px;color:var(--ink);line-height:1.9;font-size:16px}
+img{max-width:100%;display:block}
+a{color:var(--main-dark)}
+.pr-bar{background:var(--navy-dark);color:#efe6cf;text-align:center;font-size:12px;padding:6px 12px;letter-spacing:.05em}
+
+/* ブログヘッダー */
+header.blog{background:#fffaf0;border-bottom:3px solid var(--main);box-shadow:0 2px 10px rgba(126,36,24,.12)}
+.blog-head{max-width:1080px;margin:0 auto;padding:26px 16px 6px;text-align:center}
+.blog-title{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-weight:800;font-size:32px;color:var(--main-dark);letter-spacing:.04em;line-height:1.4}
+.blog-title a{color:inherit;text-decoration:none}
+.blog-title .accent-mark{color:var(--accent)}
+.blog-tagline{font-size:13.5px;color:var(--muted);margin-top:4px}
+nav.global{border-top:1px dashed var(--line);margin-top:14px}
+nav.global .nav-in{max-width:1080px;margin:0 auto;padding:9px 16px;display:flex;justify-content:center;gap:26px;flex-wrap:wrap}
+nav.global a{font-size:14px;font-weight:700;text-decoration:none;color:var(--ink)}
+nav.global a:hover{color:var(--main)}
+
+/* トップビジュアル */
+.top-visual{max-width:1080px;margin:22px auto 0;padding:0 16px}
+.top-visual figure{position:relative;border-radius:14px;overflow:hidden;border:6px solid #fff;box-shadow:0 10px 28px rgba(43,58,85,.25)}
+.top-visual img{width:100%;height:430px;object-fit:cover;object-position:center 38%}
+.top-visual figcaption{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(180deg,transparent,rgba(29,41,66,.82));color:#fff;padding:34px 20px 14px;font-size:13.5px}
+.top-visual figcaption strong{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:17px;display:block}
+
+/* レイアウト（本文＋サイドバー） */
+.layout{max-width:1080px;margin:0 auto;padding:36px 16px 12px;display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:32px;align-items:start}
+.col-main{min-width:0}
+.col-side{display:flex;flex-direction:column;gap:20px;position:sticky;top:16px}
+
+/* もくじ */
+.toc{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:14px;padding:18px 20px 10px;margin-bottom:30px;box-shadow:0 3px 10px rgba(126,36,24,.07)}
+.toc-title{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:16.5px;font-weight:800;color:var(--navy-dark);letter-spacing:.08em;margin-bottom:8px}
+.toc ul{list-style:none}
+.toc li{border-bottom:1px dashed var(--line);padding:8px 0;font-size:14.5px}
+.toc li:last-child{border-bottom:none}
+.toc a{font-weight:700;text-decoration:none;color:var(--main-dark)}
+.toc a:hover{text-decoration:underline}
+.toc span{color:var(--muted);font-size:13px;margin-left:10px}
+
+/* 記事 */
+.sec-title{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:22px;color:var(--navy-dark);border-left:8px solid var(--main);border-bottom:2px dashed var(--accent);padding:2px 0 8px 12px;margin-bottom:22px;letter-spacing:.06em}
+article.post{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px;margin-bottom:30px;box-shadow:0 4px 14px rgba(126,36,24,.09)}
+.post-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.post-date{font-size:13px;color:var(--muted);font-weight:700;letter-spacing:.05em}
+.tag{display:inline-block;background:#f7e3da;color:var(--main-dark);font-size:12px;font-weight:700;border:1px solid var(--main);border-radius:999px;padding:2px 10px}
+article.post h2,article.post h3.post-title{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:22px;line-height:1.5;color:var(--navy-dark);margin-bottom:12px}
+.post-photo{border-radius:12px;overflow:hidden;border:4px solid #fff;box-shadow:0 6px 16px rgba(43,58,85,.18);margin-bottom:8px}
+.post-photo img{width:100%;max-height:520px;object-fit:cover}
+.post-photo.sub img{max-height:340px}
+.photo-cap{font-size:12.5px;color:var(--muted);margin-bottom:12px}
+.post-photos-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.post-photos-2 .post-photo{margin-bottom:8px}
+.post-photos-2 .post-photo img{height:260px;max-height:260px}
+article.post p{font-size:15.5px;color:#4c463a;margin-bottom:10px}
+.info{font-size:13.5px;border-top:1px dashed var(--line);padding-top:10px;margin-top:12px}
+.info div{display:flex;gap:8px}
+.info dt{font-weight:700;color:var(--main-dark);white-space:nowrap}
+.info dd{color:#5c5344}
+.post-foot{margin-top:12px;border-top:1px dashed var(--line);padding-top:10px}
+.post-foot .post-link:not(:last-child){margin-right:16px}
+.rel{margin-top:14px;background:#f4efe0;border:1px solid var(--line);border-radius:10px;padding:10px 14px;font-size:14px}
+.rel a{font-weight:700}
+.post-link{font-weight:700;font-size:14px;text-decoration:none}
+.post-link::after{content:" →"}
+.note{font-size:13.5px;color:var(--muted);margin-top:14px}
+
+/* 記事アコーディオン（タイトル／続きを読む で開閉） */
+.post-more{display:none}
+article.post.open .post-more{display:block}
+.post-title-btn{display:block;width:100%;background:none;border:none;padding:0;margin:0;font:inherit;color:inherit;letter-spacing:inherit;text-align:left;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.post-title-btn::after{content:"▾";color:var(--main);font-size:.72em;margin-left:8px;vertical-align:.18em}
+article.post.open .post-title-btn::after{content:"▴"}
+.read-more{display:inline-block;margin-top:14px;background:#fff;border:1.5px solid var(--main);color:var(--main-dark);font-weight:700;font-size:14px;font-family:inherit;padding:8px 20px;border-radius:999px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.read-more::after{content:"▾";font-size:11px;margin-left:7px}
+article.post.open .read-more::after{content:"▴"}
+.read-more:active{transform:translateY(1px)}
+@media (hover:hover){.read-more:hover{background:#f7e3da}.post-title-btn:hover{color:var(--main-dark)}}
+.post-title-btn:focus-visible,.read-more:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* 神話・伝説 */
+.myths{margin-bottom:6px}
+.myths-lead{font-size:14.5px;color:#5c5344;margin-bottom:16px}
+.myths article.post{background:#fffaf0;border-left:6px solid var(--navy)}
+.myths article.post p{line-height:1.95}
+
+/* サイドバー */
+.side-box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 4px 14px rgba(126,36,24,.09)}
+.side-box h3{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:16.5px;color:var(--navy-dark);border-bottom:2px dashed var(--accent);padding-bottom:6px;margin-bottom:12px}
+.profile-card{text-align:center}
+.profile-card img{width:110px;height:110px;border-radius:50%;object-fit:cover;margin:2px auto 10px;border:4px solid #fff;box-shadow:0 4px 12px rgba(43,58,85,.25)}
+.profile-name{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:19px;font-weight:800;color:var(--main-dark)}
+.profile-card p{font-size:13.5px;color:#5c5344;text-align:left;margin-top:8px}
+.profile-links{margin-top:12px;display:flex;flex-direction:column;gap:8px}
+.btn{display:inline-block;background:linear-gradient(180deg,#c0452f,#a93420);color:#fff;font-weight:800;text-decoration:none;padding:11px 18px;border-radius:999px;box-shadow:0 4px 0 var(--main-dark);font-size:14px;text-align:center}
+.btn:active{transform:translateY(2px);box-shadow:none}
+.btn-sub{background:linear-gradient(180deg,#3a4c73,#2b3a55);box-shadow:0 4px 0 var(--navy-dark)}
+.side-list{list-style:none}
+.side-list li{border-bottom:1px dashed var(--line);padding:7px 0;font-size:14px}
+.side-list li:last-child{border-bottom:none}
+.side-list a{text-decoration:none;font-weight:700;color:var(--ink)}
+.side-list a:hover{color:var(--main)}
+.side-list .cnt{color:var(--muted);font-size:12.5px;font-weight:400}
+
+/* セクション（基本・グッズ・FAQ） */
+section.block{max-width:1080px;margin:0 auto;padding:44px 16px}
+section.block h2{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:24px;color:var(--navy-dark);border-left:8px solid var(--main);border-bottom:2px dashed var(--accent);padding:2px 0 6px 12px;margin-bottom:16px}
+h3.sub{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:18px;color:var(--main-dark);margin:20px 0 6px}
+h3.sub:first-child{margin-top:0}
+.sec-lead{color:#5c5344;margin-bottom:16px}
+.lead{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:0 3px 10px rgba(126,36,24,.07)}
+.lead ul,.lead ol{margin-left:20px}
+.lead p{margin-bottom:8px}
+.steps li{margin-bottom:8px}
+.wide-img{width:100%;height:300px;object-fit:cover;border-radius:14px;border:6px solid #fff;box-shadow:0 8px 22px rgba(43,58,85,.2);margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:8px;box-shadow:0 4px 14px rgba(126,36,24,.09)}
+.card h3{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:19px;color:var(--navy-dark);line-height:1.4}
+.card p{font-size:14.5px;color:#5c5344}
+.card .prod{font-size:14px;color:var(--ink);font-weight:700}
+.price{font-weight:800;color:var(--main-dark)}
+.buy{margin-top:auto}
+.buy a{display:block;text-align:center;background:linear-gradient(180deg,#bf0000,#9c0000);color:#fff;font-weight:800;text-decoration:none;padding:11px 16px;border-radius:10px;box-shadow:0 3px 0 #6e0000}
+.buy a:active{transform:translateY(2px);box-shadow:none}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin-bottom:10px}
+summary{font-weight:700;cursor:pointer;color:var(--navy-dark)}
+details p{font-size:14.5px;color:#5c5344;margin-top:6px;overflow-wrap:anywhere}
+
+/* フッター */
+footer{background:var(--navy-dark);color:#d9d2bd;margin-top:24px}
+.foot-in{max-width:1080px;margin:0 auto;padding:28px 16px;font-size:13.5px}
+.foot-logo{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:18px;color:#fff;font-weight:800;margin-bottom:8px}
+.foot-nav{margin-bottom:12px;line-height:2}
+.foot-nav a{text-decoration:none}
+.foot-nav a:hover{text-decoration:underline}
+section.block,article.post,.myths{scroll-margin-top:14px}
+footer a{color:#f0c987}
+.credits{margin-top:8px;color:#a99f83}
+
+@media (max-width:860px){
+  .layout{grid-template-columns:1fr}
+  .col-side{position:static}
+  .top-visual img{height:250px}
+  .blog-title{font-size:25px}
+  .post-photos-2{grid-template-columns:1fr}
+  .post-photos-2 .post-photo img{height:auto;max-height:340px}
+  nav.global .nav-in{gap:18px;flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;-webkit-overflow-scrolling:touch;padding:9px 16px}
+  nav.global a{white-space:nowrap}
+  article.post{padding:20px 16px}
+  .toc span{display:block;margin-left:0}
+  section.block{padding:36px 16px}
+}

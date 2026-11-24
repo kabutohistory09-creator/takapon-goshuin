@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kabutohistory09-creator.github.io/takapon-goshuin/sitemap.xml
