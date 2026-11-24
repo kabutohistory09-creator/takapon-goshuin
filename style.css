@@ -151,3 +151,18 @@ footer a{color:#f0c987}
   .toc span{display:block;margin-left:0}
   section.block{padding:36px 16px}
 }
+
+/* 写真ギャラリー（2枚以上の写真を同じ大きさで整列） */
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:2px 0 14px}
+.gallery figure{margin:0;min-width:0}
+.gallery .post-photo{margin-bottom:0;aspect-ratio:4/3}
+.gallery .post-photo img{width:100%;height:100%;max-height:none;object-fit:contain;background:#f7f1de}
+.gallery .photo-cap{margin:6px 2px 0}
+/* プロフィールの桐箱写真 */
+.profile-card .profile-box-photos{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.profile-card .profile-box-photos img{width:100%;height:104px;object-fit:cover;border-radius:10px;border:3px solid #fff;box-shadow:0 3px 8px rgba(43,58,85,.2);margin:0}
+@media (max-width:640px){
+  .gallery{grid-template-columns:1fr}
+  .info div{flex-direction:column;gap:0;margin-bottom:7px}
+  .info div:last-child{margin-bottom:0}
+}
